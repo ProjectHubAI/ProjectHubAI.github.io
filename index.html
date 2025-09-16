@@ -5,91 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Freelancing Services</title>
   <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <!-- Hero Section -->
-  <header class="hero">
-    <nav class="navbar">
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
       <img src="assets/logo.png" alt="Logo" class="logo">
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#register">Register</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
-    </nav>
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1>AI Solutions for Businesses</h1>
-      <p>Content, Chatbots, Websites & Marketing powered by AI</p>
-      <a href="#services" class="btn-primary">Get Started</a>
+      <h1>Empower Your Business with <span class="gradient-text">AI</span></h1>
+      <p>From content creation to chatbots, websites, and marketing — I deliver AI-driven solutions to grow your business.</p>
+      <a href="services.html" class="btn-primary">Explore Services</a>
     </div>
   </header>
 
-  <!-- About Section -->
-  <section id="about" class="about">
-    <h2>About Me</h2>
-    <p>I help businesses harness AI to grow faster and smarter. From content creation to custom chatbots and AI-powered marketing, I deliver solutions that make your business stand out.</p>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services" class="services">
-    <h2>My Services</h2>
+  <!-- Services Preview -->
+  <section class="services-preview container">
+    <h2>What I Offer</h2>
     <div class="service-grid">
-      <div class="service-card">
-        <img src="assets/icons/content.png" alt="Content Creation">
+      <a href="content.html" class="service-card">
+        <img src="assets/icons/content.png" alt="Content Icon">
         <h3>AI Content Creation</h3>
-        <p>Create blog posts, product descriptions, and marketing copy with AI assistance.</p>
-      </div>
-      <div class="service-card">
-        <img src="assets/icons/chatbot.png" alt="Chatbots">
+        <p>High-quality AI-powered content for blogs, ads, and more.</p>
+      </a>
+      <a href="chatbots.html" class="service-card">
+        <img src="assets/icons/chatbot.png" alt="Chatbot Icon">
         <h3>AI Chatbots</h3>
-        <p>Custom chatbots to automate customer support and improve engagement.</p>
-      </div>
-      <div class="service-card">
-        <img src="assets/icons/website.png" alt="AI Websites">
+        <p>Automated customer engagement & 24/7 support bots.</p>
+      </a>
+      <a href="websites.html" class="service-card">
+        <img src="assets/icons/website.png" alt="Website Icon">
         <h3>AI Websites</h3>
-        <p>Simple, professional websites with AI-driven features for your business.</p>
-      </div>
-      <div class="service-card">
-        <img src="assets/icons/marketing.png" alt="AI Marketing">
+        <p>Smart websites with AI features tailored to your business.</p>
+      </a>
+      <a href="marketing.html" class="service-card">
+        <img src="assets/icons/marketing.png" alt="Marketing Icon">
         <h3>AI Ads & Marketing</h3>
-        <p>Boost sales with AI-optimized advertising and smart marketing campaigns.</p>
-      </div>
+        <p>Data-driven ads & marketing strategies to maximize ROI.</p>
+      </a>
     </div>
   </section>
 
-  <!-- Registration Form -->
-  <section id="register" class="register">
-    <h2>Register for a Service</h2>
-    <form id="service-form" action="https://formspree.io/f/your-form-id" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <input type="text" name="business" placeholder="Business Name">
-      <select name="service">
-        <option>AI Content Creation</option>
-        <option>AI Chatbots</option>
-        <option>AI Websites</option>
-        <option>AI Ads & Marketing</option>
-      </select>
-      <textarea name="message" placeholder="Your Message"></textarea>
-      <button type="submit" class="btn-primary">Submit</button>
-    </form>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:your@email.com">your@email.com</a></p>
-    <p>LinkedIn: <a href="#">Your LinkedIn</a></p>
-    <p>GitHub: <a href="#">Your GitHub</a></p>
+  <!-- Call to Action -->
+  <section class="cta">
+    <div class="cta-content">
+      <h2>Ready to take your business to the next level?</h2>
+      <p>Register today and start using AI to grow your business.</p>
+      <a href="register.html" class="btn-secondary">Get Started</a>
+    </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>&copy; 2025 Your Name. All rights reserved.</p>
+    <div class="container footer-container">
+      <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </div>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
 
