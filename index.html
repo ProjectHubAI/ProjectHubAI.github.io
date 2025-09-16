@@ -1,78 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Freelancing Services</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body>
   <!-- Hero Section -->
-  <header class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20 px-6 text-center">
-    <h1 class="text-4xl md:text-5xl font-bold mb-4">AI Solutions for Businesses</h1>
-    <p class="text-lg md:text-xl mb-6">Content, Chatbots, Websites & Marketing powered by AI</p>
-    <a href="#services" class="bg-white text-blue-600 font-semibold px-6 py-3 rounded-full shadow-md hover:bg-gray-200">Get Started</a>
+  <header class="hero">
+    <nav class="navbar">
+      <img src="assets/logo.png" alt="Logo" class="logo">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#register">Register</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content">
+      <h1>AI Solutions for Businesses</h1>
+      <p>Content, Chatbots, Websites & Marketing powered by AI</p>
+      <a href="#services" class="btn-primary">Get Started</a>
+    </div>
   </header>
 
   <!-- About Section -->
-  <section id="about" class="py-16 px-6 max-w-4xl mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-6">About Me</h2>
-    <p class="text-lg text-gray-700">I help businesses harness AI to grow faster and smarter. From content creation to custom chatbots and AI-powered marketing, I deliver solutions that make your business stand out.</p>
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>I help businesses harness AI to grow faster and smarter. From content creation to custom chatbots and AI-powered marketing, I deliver solutions that make your business stand out.</p>
   </section>
 
   <!-- Services Section -->
-  <section id="services" class="py-16 bg-gray-100 px-6">
-    <h2 class="text-3xl font-bold text-center mb-10">My Services</h2>
-    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">
-      <div class="bg-white p-6 rounded-2xl shadow-md text-center">
-        <h3 class="text-xl font-semibold mb-3">AI Content Creation</h3>
+  <section id="services" class="services">
+    <h2>My Services</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <img src="assets/icons/content.png" alt="Content Creation">
+        <h3>AI Content Creation</h3>
         <p>Create blog posts, product descriptions, and marketing copy with AI assistance.</p>
       </div>
-      <div class="bg-white p-6 rounded-2xl shadow-md text-center">
-        <h3 class="text-xl font-semibold mb-3">AI Chatbots</h3>
+      <div class="service-card">
+        <img src="assets/icons/chatbot.png" alt="Chatbots">
+        <h3>AI Chatbots</h3>
         <p>Custom chatbots to automate customer support and improve engagement.</p>
       </div>
-      <div class="bg-white p-6 rounded-2xl shadow-md text-center">
-        <h3 class="text-xl font-semibold mb-3">AI Websites</h3>
+      <div class="service-card">
+        <img src="assets/icons/website.png" alt="AI Websites">
+        <h3>AI Websites</h3>
         <p>Simple, professional websites with AI-driven features for your business.</p>
       </div>
-      <div class="bg-white p-6 rounded-2xl shadow-md text-center">
-        <h3 class="text-xl font-semibold mb-3">AI Ads & Marketing</h3>
+      <div class="service-card">
+        <img src="assets/icons/marketing.png" alt="AI Marketing">
+        <h3>AI Ads & Marketing</h3>
         <p>Boost sales with AI-optimized advertising and smart marketing campaigns.</p>
       </div>
     </div>
   </section>
 
   <!-- Registration Form -->
-  <section id="register" class="py-16 px-6 max-w-3xl mx-auto">
-    <h2 class="text-3xl font-bold text-center mb-8">Register for a Service</h2>
-    <form action="https://formspree.io/f/your-form-id" method="POST" class="bg-white shadow-md rounded-2xl p-8 space-y-4">
-      <input type="text" name="name" placeholder="Your Name" required class="w-full border px-4 py-2 rounded-lg" />
-      <input type="email" name="email" placeholder="Your Email" required class="w-full border px-4 py-2 rounded-lg" />
-      <input type="text" name="business" placeholder="Business Name" class="w-full border px-4 py-2 rounded-lg" />
-      <select name="service" class="w-full border px-4 py-2 rounded-lg">
+  <section id="register" class="register">
+    <h2>Register for a Service</h2>
+    <form id="service-form" action="https://formspree.io/f/your-form-id" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="business" placeholder="Business Name">
+      <select name="service">
         <option>AI Content Creation</option>
         <option>AI Chatbots</option>
         <option>AI Websites</option>
         <option>AI Ads & Marketing</option>
       </select>
-      <textarea name="message" placeholder="Your Message" rows="4" class="w-full border px-4 py-2 rounded-lg"></textarea>
-      <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700">Submit</button>
+      <textarea name="message" placeholder="Your Message"></textarea>
+      <button type="submit" class="btn-primary">Submit</button>
     </form>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="py-16 bg-gray-100 px-6 text-center">
-    <h2 class="text-3xl font-bold mb-6">Contact Me</h2>
-    <p class="mb-4">Email: <a href="mailto:your@email.com" class="text-blue-600">your@email.com</a></p>
-    <p class="mb-4">LinkedIn: <a href="#" class="text-blue-600">Your LinkedIn</a></p>
-    <p>GitHub: <a href="#" class="text-blue-600">Your GitHub</a></p>
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:your@email.com">your@email.com</a></p>
+    <p>LinkedIn: <a href="#">Your LinkedIn</a></p>
+    <p>GitHub: <a href="#">Your GitHub</a></p>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-900 text-gray-300 text-center py-6">
+  <footer class="footer">
     <p>&copy; 2025 Your Name. All rights reserved.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
 
