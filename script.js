@@ -1,21 +1,18 @@
-// Smooth Scroll
-document.querySelectorAll('a[href^=\"#\"]').forEach(anchor => {
-  anchor.addEventListener("click", function (e) {
+// Toggle mobile menu
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
+// Smooth scroll for internal links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function(e) {
     e.preventDefault();
     document.querySelector(this.getAttribute("href")).scrollIntoView({
       behavior: "smooth"
     });
   });
-});
-
-// Form Validation
-document.getElementById("service-form").addEventListener("submit", function (e) {
-  let name = this.querySelector("input[name='name']").value.trim();
-  let email = this.querySelector("input[name='email']").value.trim();
-
-  if (!name || !email) {
-    alert("Please fill in required fields.");
-    e.preventDefault();
-  }
 });
 
