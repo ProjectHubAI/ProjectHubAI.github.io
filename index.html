@@ -1,94 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Freelancer | Your Name</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f5f7fa;
-      color: #333;
-    }
-    header {
-      background: #0d47a1;
-      color: white;
-      text-align: center;
-      padding: 60px 20px;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    header p {
-      font-size: 1.2rem;
-    }
-    section {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-    }
-    h2 {
-      color: #0d47a1;
-    }
-    .services, .contact {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      margin-top: 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    ul {
-      padding-left: 20px;
-    }
-    footer {
-      background: #0d47a1;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-    a {
-      color: #0d47a1;
-      text-decoration: none;
-      font-weight: bold;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Freelancing Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header>
-    <h1>Hi, I'm Your Name</h1>
-    <p>AI Freelancer | Automation | Chatbots | Data Solutions</p>
+<body class="bg-gray-50 text-gray-800 font-sans">
+  <!-- Hero Section -->
+  <header class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20 px-6 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">AI Solutions for Businesses</h1>
+    <p class="text-lg md:text-xl mb-6">Content, Chatbots, Websites & Marketing powered by AI</p>
+    <a href="#services" class="bg-white text-blue-600 font-semibold px-6 py-3 rounded-full shadow-md hover:bg-gray-200">Get Started</a>
   </header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>
-      I help businesses leverage Artificial Intelligence to automate tasks, build intelligent chatbots,
-      and create smart solutions that save time and money.
-    </p>
+  <!-- About Section -->
+  <section id="about" class="py-16 px-6 max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-6">About Me</h2>
+    <p class="text-lg text-gray-700">I help businesses harness AI to grow faster and smarter. From content creation to custom chatbots and AI-powered marketing, I deliver solutions that make your business stand out.</p>
   </section>
 
-  <section class="services">
-    <h2>Services</h2>
-    <ul>
-      <li>Custom AI Chatbots</li>
-      <li>Process Automation</li>
-      <li>Data Analysis & Insights</li>
-      <li>AI-Powered Web Tools</li>
-    </ul>
+  <!-- Services Section -->
+  <section id="services" class="py-16 bg-gray-100 px-6">
+    <h2 class="text-3xl font-bold text-center mb-10">My Services</h2>
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">
+      <div class="bg-white p-6 rounded-2xl shadow-md text-center">
+        <h3 class="text-xl font-semibold mb-3">AI Content Creation</h3>
+        <p>Create blog posts, product descriptions, and marketing copy with AI assistance.</p>
+      </div>
+      <div class="bg-white p-6 rounded-2xl shadow-md text-center">
+        <h3 class="text-xl font-semibold mb-3">AI Chatbots</h3>
+        <p>Custom chatbots to automate customer support and improve engagement.</p>
+      </div>
+      <div class="bg-white p-6 rounded-2xl shadow-md text-center">
+        <h3 class="text-xl font-semibold mb-3">AI Websites</h3>
+        <p>Simple, professional websites with AI-driven features for your business.</p>
+      </div>
+      <div class="bg-white p-6 rounded-2xl shadow-md text-center">
+        <h3 class="text-xl font-semibold mb-3">AI Ads & Marketing</h3>
+        <p>Boost sales with AI-optimized advertising and smart marketing campaigns.</p>
+      </div>
+    </div>
   </section>
 
-  <section class="contact">
-    <h2>Contact Me</h2>
-    <p>Let’s work together! Reach me at:</p>
-    <p><a href="mailto:yourname@email.com">yourname@email.com</a></p>
+  <!-- Registration Form -->
+  <section id="register" class="py-16 px-6 max-w-3xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-8">Register for a Service</h2>
+    <form action="https://formspree.io/f/your-form-id" method="POST" class="bg-white shadow-md rounded-2xl p-8 space-y-4">
+      <input type="text" name="name" placeholder="Your Name" required class="w-full border px-4 py-2 rounded-lg" />
+      <input type="email" name="email" placeholder="Your Email" required class="w-full border px-4 py-2 rounded-lg" />
+      <input type="text" name="business" placeholder="Business Name" class="w-full border px-4 py-2 rounded-lg" />
+      <select name="service" class="w-full border px-4 py-2 rounded-lg">
+        <option>AI Content Creation</option>
+        <option>AI Chatbots</option>
+        <option>AI Websites</option>
+        <option>AI Ads & Marketing</option>
+      </select>
+      <textarea name="message" placeholder="Your Message" rows="4" class="w-full border px-4 py-2 rounded-lg"></textarea>
+      <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700">Submit</button>
+    </form>
   </section>
 
-  <footer>
-    <p>© 2025 Your Name | AI Freelancing</p>
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-gray-100 px-6 text-center">
+    <h2 class="text-3xl font-bold mb-6">Contact Me</h2>
+    <p class="mb-4">Email: <a href="mailto:your@email.com" class="text-blue-600">your@email.com</a></p>
+    <p class="mb-4">LinkedIn: <a href="#" class="text-blue-600">Your LinkedIn</a></p>
+    <p>GitHub: <a href="#" class="text-blue-600">Your GitHub</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 text-center py-6">
+    <p>&copy; 2025 Your Name. All rights reserved.</p>
   </footer>
 </body>
 </html>
+
