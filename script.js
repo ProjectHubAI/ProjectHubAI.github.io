@@ -15,4 +15,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
   });
 });
+document.getElementById("chatbot-toggle").addEventListener("click", () => {
+  document.getElementById("chatbot-widget").style.display = "flex";
+  document.getElementById("chatbot-toggle").style.display = "none";
+});
+
+document.getElementById("chatbot-close").addEventListener("click", () => {
+  document.getElementById("chatbot-widget").style.display = "none";
+  document.getElementById("chatbot-toggle").style.display = "block";
+});
 
