@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nexora Digital | AI Automation & Content</title>
+  <title>AI Freelancing Services</title>
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
 </head>
@@ -11,10 +11,7 @@
   <!-- Navbar -->
   <nav class="navbar">
     <div class="container nav-container">
-      <a class="brand" href="index.html" aria-label="Nexora Digital home">
-        <span class="brand-mark">N</span>
-        <span class="brand-name">Nexora Digital</span>
-      </a>
+      <img src="assets/logo.png" alt="Logo" class="logo">
       <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -28,47 +25,40 @@
 
   <!-- Hero Section -->
   <header class="hero">
-    <div class="container hero-content">
-      <h1>Clean, modern digital execution — powered by AI.</h1>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Empower Your Business with <span class="gradient-text">AI</span></h1>
       <p>
-        Nexora Digital helps small businesses launch faster with AI-assisted content,
-        automation, chatbots, and conversion-focused websites.
+        From content creation to automations,chatbots, websites, and marketing — I deliver
+        AI-driven solutions to grow your business.
       </p>
-      <div class="hero-actions">
-        <a href="#services" class="btn-primary">View services</a>
-        <a href="order.html" class="btn-secondary">Request a quote</a>
-      </div>
-      <div class="hero-badges" aria-label="Highlights">
-        <span class="badge">Fast turnaround</span>
-        <span class="badge">Affordable</span>
-        <span class="badge">Personalized</span>
-      </div>
+      <a href="#services" class="btn-primary">Explore Services</a>
     </div>
   </header>
 
   <!-- Services Section -->
   <section id="services" class="services-preview container">
-    <h2>Services</h2>
+    <h2>What I Offer</h2>
     <div class="service-grid">
       <a href="content.html" class="service-card">
         <img src="assets/icons/content.png" alt="Content Icon">
-        <h3>Content & Copy</h3>
-        <p>Ads, landing page copy, emails, and social content — consistent and on-brand.</p>
+        <h3>AI Content Creation</h3>
+        <p>High-quality AI-powered content for blogs, ads, and more.</p>
       </a>
       <a href="chatbots.html" class="service-card">
         <img src="assets/icons/chatbot.png" alt="Chatbot Icon">
-        <h3>Chatbots</h3>
-        <p>Website and social chatbots to answer FAQs, qualify leads, and book calls.</p>
+        <h3>AI Chatbots</h3>
+        <p>Automated customer engagement & 24/7 support bots.</p>
       </a>
       <a href="websites.html" class="service-card">
         <img src="assets/icons/website.png" alt="Website Icon">
-        <h3>Websites</h3>
-        <p>Clean, conversion-focused pages with modern design and clear messaging.</p>
+        <h3>AI Websites</h3>
+        <p>Smart websites with AI features tailored to your business.</p>
       </a>
       <a href="marketing.html" class="service-card">
         <img src="assets/icons/marketing.png" alt="Marketing Icon">
-        <h3>Growth Support</h3>
-        <p>Email outreach, simple funnels, and ad creatives to generate demand.</p>
+        <h3>AI Ads & Marketing</h3>
+        <p>Data-driven ads & marketing strategies to maximize ROI.</p>
       </a>
     </div>
   </section>
@@ -76,55 +66,53 @@
   <!-- Call to Action -->
   <section class="cta">
     <div class="cta-content">
-      <h2>Ready to start?</h2>
-      <p>Tell us what you need — we’ll reply with a clear plan and price.</p>
-      <a href="order.html" class="btn-secondary">Request a quote</a>
+      <h2>Ready to take your business to the next level?</h2>
+      <p>Place an order and start using AI to grow your business.</p>
+      <a href="order.html" class="btn-secondary">Order Now</a>
     </div>
   </section>
 
   <!-- Contact Section -->
   <section id="contact" class="contact-section">
     <div class="container">
-      <h2>Contact</h2>
-      <p>Reach out for questions, quotes, or collaborations.</p>
+      <h2>Contact Me</h2>
+      <p>Let’s connect! Reach out for inquiries or collaborations.</p>
       <div class="contact-grid">
         <div class="contact-card">
           <h3>Email</h3>
-          <p><a href="mailto:projecthubai@gmail.com">projecthubai@gmail.com</a></p>
+          <p><a href="mailto:yourname@email.com">solventionai@gmail.com</a></p>
         </div>
         <div class="contact-card">
-          <h3>Availability</h3>
-          <p>Response within 24–48 hours</p>
+          <h3>Phone</h3>
+          <p>+1 234 567 890</p>
         </div>
         <div class="contact-card">
           <h3>Social</h3>
           <p>
-            <a href="#">LinkedIn</a> |
-            <a href="#">X</a>
+            <a href="#">LinkedIn</a> | 
+            <a href="#">Twitter</a>
           </p>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- Floating Chatbot -->
-  <button id="chatbot-toggle">🤖</button>
-  <div id="chatbot-widget" style="display:none;">
-    <div class="chatbot-header">
-      <span>Nexora Assistant</span>
-      <button id="chatbot-close">✖</button>
-    </div>
-    <iframe
-      src="https://huggingface.co/spaces/Danioeloo/projecthubai-chatbot.hf.space"
-      width="100%" height="100%"
-      style="border:none; border-radius:0 0 12px 12px;">
-    </iframe>
+<!-- Floating Chatbot -->
+<button id="chatbot-toggle">🤖</button>
+<div id="chatbot-widget" style="display:none;">
+  <div class="chatbot-header">
+    <span>SolventionAI Chatbot</span>
+    <button id="chatbot-close">✖</button>
   </div>
-
+  <iframe 
+    src="https://huggingface.co/spaces/Danioeloo/projecthubai-chatbot.hf.space"
+    width="100%" height="100%"
+    style="border:none; border-radius:0 0 12px 12px;">
+  </iframe>
+</div>
   <!-- Footer -->
   <footer class="footer">
     <div class="container footer-container">
-      <p>&copy; 2026 Nexora Digital. All rights reserved.</p>
+      <p>&copy; 2025 Solvenion AI. All rights reserved.</p>
     </div>
   </footer>
 </body>
