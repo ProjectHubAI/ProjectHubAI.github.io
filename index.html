@@ -128,10 +128,11 @@
 #chat-box{
   position:fixed; bottom:90px; right:20px;
   width:320px; height:420px; background:#fff;
-  border-radius:14px; display:none;
+  border-radius:14px;
+  display:none; /* ✅ hidden on refresh */
+  flex-direction:column;
   box-shadow:0 12px 40px rgba(0,0,0,.3);
   overflow:hidden; font-family:Arial, sans-serif;
-  display:flex; flex-direction:column;
 }
 
 .chat-header{
@@ -221,6 +222,7 @@ input.addEventListener("keypress", e => {
   if(e.key === "Enter") sendMessage();
 });
 </script>
+
 
 
 </div>
