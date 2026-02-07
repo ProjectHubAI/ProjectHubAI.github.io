@@ -98,6 +98,7 @@
   </section>
 <!-- Floating Chatbot -->
 <!-- SOLVENTION AI SIMPLE CHATBOT -->
+<!-- SOLVENTION AI CHATBOT -->
 <button id="chat-btn">🤖</button>
 
 <div id="chat-box">
@@ -106,9 +107,7 @@
     <span id="chat-close">✖</span>
   </div>
 
-  <div id="chat-messages">
-    <div class="bot">Hello! How can I help you?</div>
-  </div>
+  <div id="chat-messages"></div>
 
   <input id="chat-input" placeholder="Type a message..." />
 </div>
@@ -123,28 +122,44 @@
 
 #chat-box{
   position:fixed; bottom:90px; right:20px;
-  width:300px; height:400px; background:#fff;
-  border-radius:12px; display:none;
-  box-shadow:0 10px 30px rgba(0,0,0,.3);
+  width:320px; height:420px; background:#fff;
+  border-radius:14px; display:none;
+  box-shadow:0 12px 40px rgba(0,0,0,.3);
   overflow:hidden; font-family:Arial, sans-serif;
+  display:flex; flex-direction:column;
 }
 
 .chat-header{
   background:#00c8d7; color:#fff;
-  padding:10px; font-weight:bold;
+  padding:12px; font-weight:bold;
   display:flex; justify-content:space-between;
 }
 
 #chat-messages{
-  padding:10px; height:280px; overflow-y:auto;
+  flex:1; padding:10px; overflow-y:auto;
   font-size:14px;
 }
 
-.bot{ color:#00666f; margin:5px 0; }
-.user{ text-align:right; margin:5px 0; }
+.bot{
+  background:#f1fafa;
+  color:#005b63;
+  padding:6px 10px;
+  border-radius:10px;
+  margin:6px 0;
+  width:fit-content;
+}
+
+.user{
+  background:#00c8d7;
+  color:#fff;
+  padding:6px 10px;
+  border-radius:10px;
+  margin:6px 0 6px auto;
+  width:fit-content;
+}
 
 #chat-input{
-  width:100%; border:none; border-top:1px solid #eee;
+  border:none; border-top:1px solid #eee;
   padding:10px; outline:none;
 }
 </style>
@@ -156,31 +171,53 @@ const close = document.getElementById("chat-close");
 const input = document.getElementById("chat-input");
 const messages = document.getElementById("chat-messages");
 
-btn.onclick = () => box.style.display = "block";
+btn.onclick = () => box.style.display = "flex";
 close.onclick = () => box.style.display = "none";
 
 const replies = [
   "Thanks for your message!",
-  "Our team will contact you soon.",
-  "SolventionAI can help with AI solutions.",
-  "Please describe your project."
+  "We’ll get back to you shortly.",
+  "SolventionAI provides smart AI solutions.",
+  "Tell us more about your project."
 ];
+
+// Load saved messages
+const saved = JSON.parse(localStorage.getItem("solvention_chat") || "[]");
+saved.forEach(m => addMessage(m.text, m.type));
+
+// Save function
+function saveMessage(text, type){
+  const history = JSON.parse(localStorage.getItem("solvention_chat") || "[]");
+  history.push({ text, type });
+  localStorage.setItem("solvention_chat", JSON.stringify(history));
+}
+
+// Add message to UI
+function addMessage(text, type){
+  const div = document.createElement("div");
+  div.className = type;
+  div.textContent = text;
+  messages.appendChild(div);
+  messages.scrollTop = messages.scrollHeight;
+}
 
 input.addEventListener("keypress", e => {
   if(e.key === "Enter" && input.value.trim()){
     const text = input.value;
 
-    messages.innerHTML += `<div class="user">${text}</div>`;
+    addMessage(text, "user");
+    saveMessage(text, "user");
     input.value = "";
 
     setTimeout(() => {
       const reply = replies[Math.floor(Math.random()*replies.length)];
-      messages.innerHTML += `<div class="bot">${reply}</div>`;
-      messages.scrollTop = messages.scrollHeight;
-    }, 600);
+      addMessage(reply, "bot");
+      saveMessage(reply, "bot");
+    }, 700);
   }
 });
 </script>
+
 
 </div>
   <!-- Footer -->
